@@ -11,7 +11,8 @@ import android.widget.ListView;
 public class MainActivity extends Activity implements AdapterView.OnItemClickListener {
 
     static final String[] FEATURE_LIST = new String[]{
-            "Moving a view with a finger"
+            "Moving a view with a finger",
+            "Custom view group"
     };
 
     @Override
@@ -29,6 +30,9 @@ public class MainActivity extends Activity implements AdapterView.OnItemClickLis
         switch (position) {
             case 0:
                 startActivity(new Intent(this, MovableViewActivity.class));
+                break;
+            case 1:
+                startActivity(new Intent(this, CustomViewGroupActivity.class));
                 break;
         }
     }
